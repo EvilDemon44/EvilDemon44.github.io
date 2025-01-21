@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    background-color: #363635;
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    font-family: 'Sour Gummy';
+    font-variant: small-caps;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 0px
+
+}
+
+p {
+    color: #B39C4D;
+    font-family: 'Permanent Marker';
+    text-size: large;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+
+footer {
+    color: #EAE0D5;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    right:25%;
+}
+#selfport {
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
