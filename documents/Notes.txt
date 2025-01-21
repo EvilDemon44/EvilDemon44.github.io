@@ -1,0 +1,17 @@
+First time only:
+Set up ssh key:
+	ssh-keygen -t ed25519 -C "Email"
+View public key:
+cat ~/.ssh/id_ed25519.pub
+
+How to get to my website directory:
+cd directory name
+
+How to push changes to my repository:
+git add -A
+git commit -m "some message"
+git push origin main 
+
+if working form more devices:
+before each session 
+git pull
