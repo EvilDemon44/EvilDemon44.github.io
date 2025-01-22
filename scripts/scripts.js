@@ -28,7 +28,7 @@ function LightMode() {
 }
 
 function GreenMode() {
-    document.getElementById('PageBody').style="background-color: #181C14;";
+    document.getElementById('PageBody').style="background-color:rgb(29, 37, 20);";
     document.getElementById('head1').style="color: #000000;";
     document.getElementById('head2').style="color: #000000;";
     document.getElementById('para1').style="color: #EAE0D5;";
