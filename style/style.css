@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
-    background-color: #363635;
+    background-color: #FFFFFF;
 
 h1, h2, h3 {
-    color: #FFFFFF;
+    color: #000000;
     font-family: 'Sour Gummy';
     font-variant: small-caps;
     text-align: center;
@@ -44,4 +44,9 @@ footer {
     margin-left: 50px;
     margin-right: 50px;
 }
+
+#colorScheme {
+    text-align: center;
+}
+
 

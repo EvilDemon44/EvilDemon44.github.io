@@ -4,33 +4,33 @@
       <meta charset="UTF-8">
       <title>Portfolio Website</title>
       <link rel="stylesheet" href="style/style.css">
+      <script src="scripts/scripts.js"></script>
   </head>
-  <body>
+  <body id="PageBody">
     <div>
-      <h1> Burns JavaScript Portfolio</h1>
+      <h1 class="dark">Burns JavaScript Portfolio</h1>
     </div>
-    <div>
-        <button onclick="">Light Mode</button>
-        <button onclick="">Dark Mode</button>
-        <button onclick="">Default Mode</button>
-
+    <div id="colorScheme">
+        <button onclick="LightMode()" >Light Mode</button>
+        <button onclick="DarkMode()" >Dark Mode</button>
+        <button onclick="" >Default Mode</button>
     </div>
     <div class="container">
         <img src="images/selfphoto.jpg" alt="picture of Alex" id="selfport">
-        <p>Hey everyone! I'm Alex, I'm a student at Weber State University. I've been pursuing a degree in computer science
+        <p class="light">Hey everyone! I'm Alex, I'm a student at Weber State University. I've been pursuing a degree in computer science
         and im not sure what it is specifically I want to go into but something in the computer programing field. I don't have
         much skill in HTML, CSS, and JavaScript yet so no judging yet. When I'm not messing around with schooling im doing one
         of two things. I'm either messing around with computer games, because those are so much fun, or im out camping or fishing
-        somewhere i really enjoy being out in the wilderness unaffected but the city we live in. There is something peaceful
+        somewhere I really enjoy being out in the wilderness unaffected but the city we live in. There is something peaceful
         about being out in nature.</p>
     </div>
     <hr>
     <div>
-    <h2>JavaScript Demonstrations</h2>
-    <p class="text">Stay tuned for new content coming soon.</p>
+    <h2 class="dark">JavaScript Demonstrations</h2>
+    <p class="light">Stay tuned for new content coming soon.</p>
     </div>
   </body>
-  <footer>
+  <footer class="dark">
     &copy; 2025 Alexander K. Burns All rights reserved.
   </footer>
 </html>
