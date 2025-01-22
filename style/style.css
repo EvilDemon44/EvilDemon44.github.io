@@ -3,6 +3,7 @@
 
 body {
     background-color: #363635;
+}
 
 h1, h2, h3 {
     color: #FFBF00;
@@ -47,9 +48,4 @@ footer {
 
 .colorScheme {
     text-align: center;
-}
-
-
-button {
-
 }
