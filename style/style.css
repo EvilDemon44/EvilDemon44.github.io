@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
-    background-color: #FFFFFF;
+    background-color: #363635;
 
 h1, h2, h3 {
-    color: #000000;
+    color: #FFBF00;
     font-family: 'Sour Gummy';
     font-variant: small-caps;
     text-align: center;
@@ -15,7 +15,7 @@ h1, h2, h3 {
 }
 
 p {
-    color: #B39C4D;
+    color: #D79334;
     font-family: 'Permanent Marker';
     text-size: large;
     text-align: center;
@@ -24,7 +24,7 @@ p {
 
 
 footer {
-    color: #EAE0D5;
+    color: #D79334;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -50,3 +50,6 @@ footer {
 }
 
 
+button {
+
+}
