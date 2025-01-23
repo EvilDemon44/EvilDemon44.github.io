@@ -28,14 +28,14 @@ function LightMode() {
 }
 
 function GreenMode() {
-    document.getElementById('PageBody').style="background-color:rgb(29, 37, 20);";
-    document.getElementById('head1').style="color: #000000;";
-    document.getElementById('head2').style="color: #000000;";
-    document.getElementById('para1').style="color: #EAE0D5;";
-    document.getElementById('para2').style="color: #EAE0D5;";
-    document.getElementById('footer').style="color: #EAE0D5;";
+    document.getElementById('PageBody').style="background-color: #001800;";
+    document.getElementById('head1').style="color: #007A00;";
+    document.getElementById('head2').style="color: #007A00;";
+    document.getElementById('para1').style="color: #008200;";
+    document.getElementById('para2').style="color: #008200;";
+    document.getElementById('footer').style="color: #008200;";
     document.getElementById('light').style="background-color: #FFFFFF;";
     document.getElementById('dark').style="background-color: #FFFFFF;";
-    document.getElementById('green').style="background-color: #FFFFFF;";
+    document.getElementById('green').style="background-color: #008200;";
 
 }
