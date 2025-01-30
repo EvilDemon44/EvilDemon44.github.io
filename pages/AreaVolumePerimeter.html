@@ -9,31 +9,49 @@
   <body>
     <div>
         <nav>
-            <a href="../index.html">Home</a> |
-            <a href="AreaVolumePerimeter.html">Study Abroad</a>
+            <button>
+                <a href="../index.html">Home</a>
+            </button>
+            <button>
+                <a href="AreaVolumePerimeter.html">Study Abroad</a>
+            </button>
         </nav>
     </div>
+    <hr>
     <div>
         <p><label for="Length1">Length:</label><input id="Length1" type="text"></p>
-        <p><label for="Width1">Width:</label><input id="Width1" type="text"></p>
+        <p><label for="Width1">Height:</label><input id="Width1" type="text"></p>
         <p>Perimeter: <span id="Perimeter"></span></p>
+        <img src="../images/perimeter.PNG" alt="Rectangle" id="rectangle1">
+        <div class="Button">
         <button onclick="Perimeter()">Calculate Perimeter</button>
-
+        </div>
+        <br><br><br><br>
     </div>
+    <hr>
     <div>
         <p><label for="Length2">Length:</label><input id="Length2" type="text"></p>
-        <p><label for="Width2">Width:</label><input id="Width2" type="text"></p>
+        <p><label for="Width2">Height:</label><input id="Width2" type="text"></p>
         <p>Area: <span id="Area"></span></p>
+        <img src="../images/perimeter.PNG" alt="Rectangle" id="rectangle2">
+        <div class="Button">
         <button onclick="Area()">Calculate Area</button>
-
+        </div>
+        <br><br><br><br>
     </div>
+    <hr>
     <div>
         <p><label for="Length3">Length:</label><input id="Length3" type="text"></p>
         <p><label for="Width3">Width:</label><input id="Width3" type="text"></p>
         <p><label for="Height3">Height:</label><input id="Height3" type="text"></p>
         <p>Volume: <span id="Volume"></span></p>
-        <button onclick="Volume()">Calculate Volume</button>
+        <img src="../images/Volume.PNG" alt="3D rectangle" id="rectangle3">
+        <div class="Button">
+            <button onclick="Volume()">Calculate Volume</button>
+        </div>
+        <br><br><br><br>
     </div>
+    <hr>
     <footer id="footer">
         &copy; 2025 Alexander K. Burns All rights reserved.
     </footer>

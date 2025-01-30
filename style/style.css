@@ -37,6 +37,24 @@ footer {
     width: 200px;
     height: 200px;
 }
+#rectangle1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+#rectangle2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+#rectangle3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
 .container {
     display: flex;
     align-items: center;
@@ -50,6 +68,10 @@ footer {
     text-align: center;
 }
 
-a {
-    align-items: center;
+nav {
+    text-align: center;
+}
+
+.Button {
+    text-align: center;
 }
