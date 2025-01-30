@@ -49,3 +49,7 @@ footer {
 .colorScheme {
     text-align: center;
 }
+
+a {
+    align-items: center;
+}
