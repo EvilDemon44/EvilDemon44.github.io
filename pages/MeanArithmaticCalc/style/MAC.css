@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    right:25%;
+}
+body {
+    background-color: #696969;
+}
+nav {
+    text-align: center;
+}

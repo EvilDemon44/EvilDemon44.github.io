@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Mean Arithmetic Calculator</title>
+    <script src="scripts/MAC.js"></script>
+    <link rel="stylesheet" href="style/MAC.css">
+    </head>
+    <body>
+        <div>
+            <nav>
+                <button>
+                    <a href="../../index.html">Home</a>
+                </button>
+                <button>
+                    <a href="../AreaVolumePerimeter.html">Area/Perimeter/Volume</a>
+                </button>
+                <button>
+                    <a href="../TicTacToe/TicTacToe.html">Tic Tac Toe</a>
+                </button>
+            </nav>
+        </div>
+        <h1>Data Set</h1>
+        <p>Enter a value: <input type="text" id="input"></p>
+        <button onclick="addButton()">Add Value</button>
+        <button onclick="removeButton()">Remove Value</button>
+        <h2>Current Dataset</h2>
+        <ul id="dataset"></ul>
+        <h2>Mean: <span id="mean"></span></h2>
+        <span></span>
+        <footer id="footer">
+            &copy; 2025 Alexander K. Burns All rights reserved.
+        </footer>
+    </body>
+</html>
