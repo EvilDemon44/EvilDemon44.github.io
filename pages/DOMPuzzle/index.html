@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Puzzle</title>
+        <style>
+            /* NOTE: Do NOT modify this stylesheet */
+            #puzzle {
+              width: 500px;
+              height: 500px;
+              border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- NOTE: Do NOT modify the body or div -->
+        <div id='puzzle'></div>
+        <script>
+
+            const puzzle = document.getElementById('puzzle');
+
+            const title = document.createElement('h1');
+            title.innerText = "DOM puzzle";
+            document.body.insertBefore(title, puzzle);
+
+            const Description = document.createElement('p');
+            Description.innerText = "This is a puzzle created entirely with JavaScript.";
+            document.body.appendChild(Description);
+
+            puzzle.style.display = 'grid';
+            puzzle.style.gridTemplateColumns = '250px 250px';
+            puzzle.style.gridTemplateRows = '250px 250px';
+
+
+            function createButton(width, height, color, text = '') {
+                const button = document.createElement('button');
+                button.style.width = width;
+                button.style.height = height;
+                button.style.backgroundColor = color;
+                button.style.border = '1px solid black';
+                button.style.fontSize = '20px';
+                button.style.color = 'white';
+                button.innerText = text;
+                return button;
+            }
+
+            const gridContainer1 = document.createElement('div');
+            gridContainer1.style.display = 'grid';
+            gridContainer1.style.gridTemplateColumns = '125px 125px';
+            gridContainer1.style.gridTemplateRows = '125px 125px';
+            gridContainer1.style.width = '250px';
+            gridContainer1.style.height = '250px';
+            puzzle.appendChild(gridContainer1);
+
+            gridContainer1.appendChild(createButton('125px', '125px', '#9455F4', 'A'));
+            gridContainer1.appendChild(createButton('125px', '125px', '#4A2B74', 'B'));
+            gridContainer1.appendChild(createButton('125px', '125px', '#594492', 'C'));
+            gridContainer1.appendChild(createButton('125px', '125px', '#854DDC', 'D'));
+
+            puzzle.appendChild(createButton('250px', '250px', '#7338A0'));
+            puzzle.appendChild(createButton('250px', '250px', '#7338A0'));
+
+            const gridContainer2 = document.createElement('div');
+            gridContainer2.style.display = 'grid';
+            gridContainer2.style.gridTemplateColumns = 'repeat(10, 25px)';
+            gridContainer2.style.gridTemplateRows = 'repeat(10, 25px)';
+            gridContainer2.style.width = '250px';
+            gridContainer2.style.height = '250px';
+            puzzle.appendChild(gridContainer2);
+
+            for (let i = 0; i < 100; i++) {
+                const gridButton = createButton('25px', '24px', '#C39CFE');
+                gridContainer2.appendChild(gridButton);
+            }
+
+            puzzle.addEventListener('mouseenter', function() {
+                puzzle.style.border = '5px solid yellow';
+            });
+
+            puzzle.addEventListener('mouseleave', function() {
+                puzzle.style.border = '5px solid black';
+            });
+
+
+
+        </script>
+    </body>
+</html>
