@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Comment Submission Form</title>
+		<style>
+			footer {
+				text-align: center;
+				position: fixed;
+				bottom: 0;
+				left: 25%;
+				right:25%;
+			}
+			body {
+				background-color: #696969;
+			}
+			nav {
+				text-align: center;
+			}
+
+			#signupForm {
+			 text-align: center;
+			}
+			h1 {
+			 text-align: center;
+			}
+
+		</style>
+    </head>
+	<body>
+		<div>
+			<nav>
+				<button>
+					<a href="../../index.html">Home</a>
+				</button>
+				<button>
+					<a href="../AreaVolumePerimeter/index.html">Area/Perimeter/Volume</a>
+				</button>
+				<button>
+					<a href="../TicTacToe/index.html">Tic Tac Toe</a>
+				</button>
+				<button>
+					<a href="../MemoryMatch/index.html">Memory Match</a>
+				</button>
+				<button>
+					<a href="../MeanArithmaticCalc/index.html">Mean Arithmetic Calculator</a>
+				</button>
+				<button>
+					<a href="../DOMPuzzle/index.html">Dom Puzzle</a>
+				</button>
+			</nav>
+		</div>
+		<h1>Comment Form</h1>
+
+		<form id="signupForm">
+
+			<label for="name">Name:</label>
+			<input
+				id="name"
+				type="text"
+				name="usersName"
+				pattern="[a-zA-Z\s]+"
+				placeholder="First and Last name"
+				title="First and Last name"
+				autocomplete="name"
+				required
+			>
+			<br><br>
+
+            <label for="phoneNumber">Phone Number:</label>
+			<input
+				id="phoneNumber"
+				type="tel"
+				name="usersPhone"
+				placeholder="123-456-7890"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+				autocomplete="phoneNumber"
+
+			>
+			<br><br>
+
+			<label for="email">Email:</label>
+			<input
+				id="email"
+				type="email"
+				name="usersEmail"
+				placeholder="Something@gmail.com"
+				autocomplete="email"
+			>
+			<br><br>
+
+
+			<label for="username">Username:</label>
+			<input
+				id="username"
+				type="text"
+				name="username"
+				placeholder="Username"
+				autocomplete="username"
+			>
+			<br>
+			<p id="usernameMessage"></p>
+			<br>
+
+			<label for="password">Password:</label>
+			<input
+				id="password"
+				type="password"
+				name="usersPass"
+				placeholder="********"
+			>
+			<br>
+			<p id="passwordMessage"></p>
+
+			<label for="comment">Comment:</label>
+			<textarea id="comment"></textarea>
+			<br><br>
+
+
+			<button type="submit">Submit</button>
+		</form>
+		<script>
+			const submissions = []
+
+
+            function sanitizeInput(data) {
+                return data.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+            }
+
+            document.getElementById('signupForm').addEventListener('submit', function(event) {
+            	event.preventDefault();
+                let name = document.getElementById('name').value;
+                let phoneNumber = document.getElementById('phoneNumber').value;
+                let email = document.getElementById('email').value;
+                let username = document.getElementById('username').value;
+                let password = document.getElementById('password').value;
+                let comment = document.getElementById('comment').value;
+
+				if (password.includes(username)) {
+					event.preventDefault();
+					return;
+				}
+
+                name = sanitizeInput(name);
+                phoneNumber = sanitizeInput(phoneNumber);
+                email = sanitizeInput(email);
+                username = sanitizeInput(username);
+                password = sanitizeInput(password);
+                comment = sanitizeInput(comment);
+
+                const sanitizedData = { name, phoneNumber, email, username, password, comment };
+                submissions.push(sanitizedData);
+                console.log(submissions);
+            });
+
+			document.getElementById('username').addEventListener('input', function() {
+				let username = this.value;
+				let output = "";
+				let validUser = /^[a-zA-Z0-9_]+$/.test(username);
+
+
+				const missing = [];
+
+				if (username.length < 4) {
+					missing.push("4-character minimum");
+				}
+
+				if (!validUser) {
+					missing.push("Username can only contain capitol and lower case letters along with the underscore character");
+				}
+
+
+				if (missing.length > 0) {
+					output = "<strong>Missing: </strong>";
+					for (let i = 0; i < missing.length - 1; i++){
+						output += missing[i] + ", ";
+					}
+					output += missing[missing.length - 1];
+				}
+				document.getElementById('usernameMessage').innerHTML = output;
+			});
+
+			document.getElementById('password').addEventListener('input', function() {
+				let password = this.value;
+				let output = "";
+				let hasLower = /[a-z]/.test(password);
+				let hasUpper = /[A-Z]/.test(password);
+				let hasNum = /[0-9]/.test(password);
+				let hasSpecial = /[!@#$%]/.test(password);
+				let username = document.getElementById('username').value;
+
+				const missing = [];
+
+				if (password.length < 8) {
+					missing.push("8-character minimum");
+				}
+
+				if (!hasLower) {
+					missing.push("need at least 1 lower case letter");
+				}
+
+				if (!hasUpper) {
+					missing.push("need at least 1 upper case letter");
+				}
+
+				if (!hasNum) {
+					missing.push("missing at least 1 number");
+				}
+
+				if (!hasSpecial) {
+					missing.push("missing at least 1 special character");
+				}
+
+				if (password.includes(username)) {
+					missing.push("password cannot contain username");
+				}
+
+				if (missing.length > 0) {
+					output = "<strong>Missing: </strong>";
+					for (let i = 0; i < missing.length - 1; i++){
+						output += missing[i] + ", ";
+					}
+					output += missing[missing.length - 1];
+				}
+				document.getElementById('passwordMessage').innerHTML = output;
+			});
+		</script>
+		<footer id="footer">
+            &copy; 2025 Alexander K. Burns All rights reserved.
+        </footer>
+	</body>
+</html>
