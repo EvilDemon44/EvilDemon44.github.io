@@ -1,0 +1,57 @@
+#themeToggle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.lightMode {
+background-color: #ffffff;
+color: #000000;
+}
+
+.darkMode {
+    background-color: #696969;
+    color: #ffffff;
+}
+
+#imageButton {
+    margin-top: 20px;
+}
+
+#dogImage {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 250px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    right:25%;
+}
+
+nav {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    text-align: center;
+}
+
+#dogImageContainer {
+    text-align: center;
+}
+
+
+#taskList {
+    list-style-position: inside;
+    text-align: center;
+
+}

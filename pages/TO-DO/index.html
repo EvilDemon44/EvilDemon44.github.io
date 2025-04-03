@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TO-DO List</title>
+        <script src="script.js" ></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>To-Do List</h1>
+        <div>
+			<nav>
+				<button>
+					<a href="../../index.html">Home</a>
+				</button>
+				<button>
+					<a href="../AreaVolumePerimeter/index.html">Area/Perimeter/Volume</a>
+				</button>
+				<button>
+					<a href="../TicTacToe/index.html">Tic Tac Toe</a>
+				</button>
+				<button>
+					<a href="../MemoryMatch/index.html">Memory Match</a>
+				</button>
+				<button>
+					<a href="../MeanArithmaticCalc/index.html">Mean Arithmetic Calculator</a>
+				</button>
+				<button>
+					<a href="../DOMPuzzle/index.html">Dom Puzzle</a>
+				</button>
+			</nav>
+		</div>
+        <div id="content">
+            <button id="themeToggle">Toggle Theme</button>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Enter task" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="taskList"></ul>
+            <p>Total tasks added in this session: <span id="sessionCount">0</span></p>
+
+            <div id="dogImageContainer">
+                <img id="dogImage" src="" alt="Random Dog" style="display: none;">
+                <p id="errorMessage" style="color: red; display: none;">Sorry, there was an error fetching the dog image. Please Refresh.</p>
+            </div>
+
+            <button id="imageButton">Get Random Dog Image</button>
+        </div>
+        <footer id="footer">
+            &copy; 2025 Alexander K. Burns All rights reserved.
+        </footer>
+    </body>
+</html>
