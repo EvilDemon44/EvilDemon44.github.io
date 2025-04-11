@@ -92,7 +92,7 @@ class VideoGame {
     },
     {
       "title": "Fallout New Vegas",
-      "platform": "PS4",
+      "platform": "Xbox 360",
       "price": 9.99,
       "releaseYear": 2010,
       "image": "images/FONV.jpg"
