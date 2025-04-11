@@ -78,7 +78,7 @@ class VideoGame {
     },
     {
       "title": "God of War Ragnarök",
-      "platform": "PlayStation 5",
+      "platform": "PS5",
       "price": 69.99,
       "releaseYear": 2022,
       "image": "images/GOWR.jpg"
@@ -99,7 +99,7 @@ class VideoGame {
     },
     {
       "title": "Fallout 4",
-      "platform": "xbox one",
+      "platform": "Xbox One",
       "price": 19.99,
       "releaseYear": 2015,
       "image": "images/F4.jpg"
